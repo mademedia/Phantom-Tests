@@ -27,9 +27,7 @@
 					_test = _tests[_x].test;
 					switch( _test.type ) {
 						case "function":
-							var check = page.evaluate(_test.function);
-
-							if( check ) {
+							if( page.evaluate(_test.function) ) {
 								console.log("Function " + _tests[_x].ident + " returned with success");
 							} else {
 								// Render the page on fail
